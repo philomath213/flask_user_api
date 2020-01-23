@@ -2,7 +2,7 @@ import os
 
 
 DEBUG = 'false'
-SECRET_KEY = 'secret_key'
+SECRET_KEY = b'IOosa0Z9XqIxZKxl'
 
 MONGODB_HOST = os.environ.get(
     'MONGODB_HOST',
