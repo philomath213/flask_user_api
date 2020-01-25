@@ -17,4 +17,4 @@ app.register_blueprint(flag_bp, url_prefix='/flag')
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host='0.0.0.0')
