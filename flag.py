@@ -10,7 +10,10 @@ flag_api = Api(flag_bp)
 
 class Flag(Resource):
     def get(self):
-        header = request.headers.get('Authorization')
+        header = request.headers.get('Authorization', None)
+        if header is None:
+            abort(400, message='Authorization header is missing')
+
         _, token = header.split()
         try:
             identity = jwt.decode(
