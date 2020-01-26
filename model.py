@@ -4,7 +4,7 @@ from marshmallow import Schema, fields, validate
 
 db = MongoEngine()
 
-ROLES = ['admin', 'user']
+ROLES = ['user']
 
 
 class UserModel(db.Document):
